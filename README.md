@@ -5,7 +5,7 @@
 npm install
 ```
 
-### Compiles development env
+### Compiles and runs development env
 ```
 npm run serve
 ```
@@ -19,17 +19,20 @@ Then disable CSRF requirement by commenting out this line:
 https://github.com/f0cker/crackq/blob/master/crackq/__init__.py#L44
 
 Then uncomment line 21 in main.js to include this line of code:
-
-Also add an entry in your local hosts file to point crackq.org to the IP where the CrackQ API is running.
-
 ```
 axios.defaults.withCredentials = true;
 ```
+
+Also add an entry in your local hosts file to point crackq.org to the IP where the CrackQ API is running.
+
 
 ### Compiles and minifies for production
 ```
 npm run build
 ```
+
+When compiled the /dist directory can be copied to the root crackq directory and then follow the guide steps 
+to rebuild the crackq containers/images
 
 ### Run your tests
 ```
@@ -41,5 +44,3 @@ npm run test
 npm run lint
 ```
 
-When compiled the /dist directory can be copied to the root crackq directory and then follow the steps 
-to rebuild the crackq containers/images
