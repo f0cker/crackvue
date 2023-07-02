@@ -18,7 +18,7 @@ Vue.config.productionTip = false;
 Vue.component('multiselect', Multiselect);
 
 // remove for prod
- axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
 axios.defaults.xsrfCookieName = 'csrftoken';
 axios.defaults.xsrfHeaderName = 'X-CSRFTOKEN';
 
